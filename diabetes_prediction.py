@@ -31,7 +31,7 @@ X = diabetes_dataset.drop(columns='Outcome', axis=1)
 Y = diabetes_dataset['Outcome']
 
 # Standardize the data
-scaler = StandardScaler()
+# scaler = StandardScaler()
 scaler.fit(X)
 standardized_data = scaler.transform(X)
 
