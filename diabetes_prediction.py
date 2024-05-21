@@ -36,8 +36,7 @@ Y = diabetes_dataset['Outcome']
 # standardized_data = scaler.transform(X)
 
 # Split the data into training and testing sets
-X_train, X_test, Y_train, Y_test = train_test_split(
-    standardized_data, Y, test_size=0.2, stratify=Y, random_state=2)
+X_train, X_test, Y_train, Y_test = train_test_split(standardized_data, Y, test_size=0.2, stratify=Y, random_state=2)
 
 # Train the SVM classifier
 classifier = svm.SVC(kernel='linear')
