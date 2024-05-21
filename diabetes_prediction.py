@@ -33,7 +33,7 @@ Y = diabetes_dataset['Outcome']
 # Standardize the data
 # scaler = StandardScaler()
 # scaler.fit(X)
-standardized_data = scaler.transform(X)
+# standardized_data = scaler.transform(X)
 
 # Split the data into training and testing sets
 X_train, X_test, Y_train, Y_test = train_test_split(
