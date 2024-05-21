@@ -39,7 +39,7 @@ Y = diabetes_dataset['Outcome']
 # X_train, X_test, Y_train, Y_test = train_test_split(standardized_data, Y, test_size=0.2, stratify=Y, random_state=2)
 
 # Train the SVM classifier
-# classifier = svm.SVC(kernel='linear')
+classifier = svm.SVC(kernel='linear')
 classifier.fit(X_train, Y_train)
 
 # Training data accuracy
