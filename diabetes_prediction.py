@@ -1,10 +1,10 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn import svm
-from sklearn.metrics import accuracy_score
+# from sklearn.preprocessing import StandardScaler
+# from sklearn.model_selection import train_test_split
+# from sklearn import svm
+# from sklearn.metrics import accuracy_score
 
 # Load the diabetes dataset
 diabetes_dataset = pd.read_csv('diabetes.csv')
@@ -31,16 +31,16 @@ X = diabetes_dataset.drop(columns='Outcome', axis=1)
 Y = diabetes_dataset['Outcome']
 
 # Standardize the data
-scaler = StandardScaler()
-scaler.fit(X)
-standardized_data = scaler.transform(X)
+# scaler = StandardScaler()
+# scaler.fit(X)
+# standardized_data = scaler.transform(X)
 
 # Split the data into training and testing sets
-X_train, X_test, Y_train, Y_test = train_test_split(standardized_data, Y, test_size=0.2, stratify=Y, random_state=2)
+# X_train, X_test, Y_train, Y_test = train_test_split(standardized_data, Y, test_size=0.2, stratify=Y, random_state=2)
 
 # Train the SVM classifier
-classifier = svm.SVC(kernel='linear')
-classifier.fit(X_train, Y_train)
+# classifier = svm.SVC(kernel='linear')
+# classifier.fit(X_train, Y_train)
 
 # Training data accuracy
 X_train_prediction = classifier.predict(X_train)
